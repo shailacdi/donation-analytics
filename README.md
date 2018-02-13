@@ -21,14 +21,14 @@ Python is a very powerful language and is known for its versatile features. This
 - Other methods to compute totals etc.
 - File operations
 - Display progress bar - helpful since application runs for longer time to produce the output
-- Key uses "|" . This helps in quicker query, and eliminates str operations while writing to output file
+- Key uses "**|**" . Since this key can be used as-is as part of the output, we can minimize any unnecessary str operations while writing to output file
 
 How is the data structure constructed?  
 Master donor list is created with all valid donors - Dictlist(dict). This uses key as **NAME|ZIPCODE**. This is a Dictlist of Dictlists as shown below. YEAR is the key for the nested inner Dictlist.
 A structure of Dictlist of dicts could have been an alternative, however, this approach provides more flexibility for any future requirements. 
 
 Sample Input data (showing only required fields). Please note that donor O'REGAN has multiple transactions for YR2017
-> C00496679|O'REGAN, KATHLEEN|92253|12042016|110
+> C00496679|O'REGAN, KATHLEEN|92253|12042016|110  
 > C00496679|O'REGAN, KATHLEEN|92253|12042017|25   
 > C00496679|O'REGAN, KATHLEEN|92253|12042017|20   
 > C00496680|WESTWOOD, ROBERT|92270|12042017|100    
