@@ -1,4 +1,4 @@
-Donor Analytics README
+Donation Analytics README
 
 ### Solution Approach
 
