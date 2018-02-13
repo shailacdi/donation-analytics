@@ -4,7 +4,7 @@
 # Table of Contents
 1. [Solution Approach](README.md#approach)
 2. [Solution Design](README.md#solution-design)
-3. [Data structure options evaluated] (README.md#options)
+3. [Data structure considerations ](README.md#datastructures)
 4. [Software/package dependencies ](README.md#dependencies)
 
 # Solution Approach
@@ -27,7 +27,7 @@ How is the data structure constructed?
 Master donor list is created with all valid donors - Dictlist(dict). This uses key as **NAME|ZIPCODE**. This is a Dictlist of Dictlists as shown below. YEAR is the key for the nested inner Dictlist, and it helps to query by YEAR. A structure of Dictlist of dicts could have been an alternative, however, this approach provides more flexibility for any future requirements. 
 
 Sample Input data (showing only required fields). Please note that donor O'REGAN has multiple transactions for YR2017
-> C00496679|O'REGAN, KATHLEEN|92253|12042016|110 
+> C00496679|O'REGAN, KATHLEEN|92253|12042016|110
 > C00496679|O'REGAN, KATHLEEN|92253|12042017|25   
 > C00496679|O'REGAN, KATHLEEN|92253|12042017|20   
 > C00496680|WESTWOOD, ROBERT|92270|12042017|100    
@@ -49,7 +49,7 @@ The following points was considered while picking the Datastructure
 	- inplace updates
 	- nested
 
-# Data structure options evaluated
+# Data structure considerations
 Upon trying various built-in Data Structures, I have created Dictlist(dict).  Below are the options considered before making the decision.
 
 a. DataFrames : While this was robust, Dataframe append was not found to be suitable. Would have worked best perhaps if it was a one-time load and read-only-processing
