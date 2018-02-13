@@ -24,7 +24,8 @@ Python is a very powerful language and is known for its versatile features. This
 - Key uses "|" . This helps in quicker query, and eliminates str operations while writing to output file
 
 How is the data structure constructed?  
-Master donor list is created with all valid donors - Dictlist(dict). This uses key as **NAME|ZIPCODE**. This is a Dictlist of Dictlists as shown below. YEAR is the key for the nested inner Dictlist, and it helps to query by YEAR. A structure of Dictlist of dicts could have been an alternative, however, this approach provides more flexibility for any future requirements. 
+Master donor list is created with all valid donors - Dictlist(dict). This uses key as **NAME|ZIPCODE**. This is a Dictlist of Dictlists as shown below. YEAR is the key for the nested inner Dictlist.
+A structure of Dictlist of dicts could have been an alternative, however, this approach provides more flexibility for any future requirements. 
 
 Sample Input data (showing only required fields). Please note that donor O'REGAN has multiple transactions for YR2017
 > C00496679|O'REGAN, KATHLEEN|92253|12042016|110
@@ -32,7 +33,8 @@ Sample Input data (showing only required fields). Please note that donor O'REGAN
 > C00496679|O'REGAN, KATHLEEN|92253|12042017|20   
 > C00496680|WESTWOOD, ROBERT|92270|12042017|100    
 
-Sample datastructure for Master donor list built during processing. As you see, if there is a duplicate key, a list of the values will be generated against the key.
+Sample datastructure for Master donor list built during processing. As you can see, querying on NAME|ZIP will fetch a list of the values. 
+NOTE: The inner Dictlist is being used as a mere dict in this program and can be extended further for any future enhancements.
 
 {**"O'REGAN, KATHLEEN|92253"**: [{**'2016'**: [{'amount': 110, 'cmte_id': 'C00496679'}]}, {**'2017'**: [{'amount': 25, 'cmte_id': 'C00496679'}]}, {**'2017'**: [{'amount': 20, 'cmte_id': 'C00496679'}]}], **'WESTWOOD, ROBERT|92270'**: [{**'2017'**: [{'amount': 100, 'cmte_id': 'C00496680'}]}]} 
 
