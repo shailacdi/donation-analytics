@@ -36,7 +36,7 @@ Sample Input data (showing only required fields). Please note that donor O'REGAN
 Sample datastructure for Master donor list built during processing. As you can see, querying on NAME|ZIP will fetch a list of the values. 
 NOTE: The inner Dictlist is being used as a mere dict in this program and can be extended further for any future enhancements.
 
-{**"O'REGAN, KATHLEEN|92253"**: [{**'2016'**: [{'amount': 110, 'cmte_id': 'C00496679'}]}, {**'2017'**: [{'amount': 25, 'cmte_id': 'C00496679'}]}, {**'2017'**: [{'amount': 20, 'cmte_id': 'C00496679'}]}], **'WESTWOOD, ROBERT|92270'**: [{**'2017'**: [{'amount': 100, 'cmte_id': 'C00496680'}]}]} 
+{**"O'REGAN, KATHLEEN|92253"**: [{'2016': [{'amount': 110, 'cmte_id': 'C00496679'}]}, {'2017': [{'amount': 25, 'cmte_id': 'C00496679'}]}, {'2017': [{'amount': 20, 'cmte_id': 'C00496679'}]}], **'WESTWOOD, ROBERT|92270'**: [{'2017': [{'amount': 100, 'cmte_id': 'C00496680'}]}]} 
 
 
 Repeat donor list is built for repeat donors. This uses key **CMTE_ID|ZIP_CODE|YEAR**. This ultimatately converts to the output.
